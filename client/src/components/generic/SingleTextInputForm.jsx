@@ -1,20 +1,22 @@
 import React, {Component} from 'react'
-import PropTypes from 'prop-types'
 
-export default class SingleTextInputForm extends Component {
-  constructor(props) {
+type State = {inputText: string}
+type Props = {
+  buttonText: ?string,
+  placeholderText: ?string,
+  onSubmit: Function,
+}
+type DefaultProps = {buttonText: 'Submit'}
+
+export default class SingleTextInputForm extends Component<
+DefaultProps,
+Props,
+State> {
+  constructor(props: Props) {
     super(props)
     this.state = {
       inputText: '',
     }
-  }
-  static propTypes = {
-    buttonText: PropTypes.string,
-    placeholderText: PropTypes.string,
-    onSubmit: PropTypes.func.isRequired,
-  }
-  static defaultProps = {
-    buttonText: 'Submit',
   }
   handleChange(event) {
     this.setState({inputText: event.target.value})

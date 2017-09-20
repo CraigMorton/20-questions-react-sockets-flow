@@ -1,6 +1,9 @@
 [ignore]
 
 [include]
+./**/*.jsx
+./**/*.js
+./*.js
 
 [libs]
 

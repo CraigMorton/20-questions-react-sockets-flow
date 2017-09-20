@@ -5,9 +5,6 @@ import QuestionList from '../components/QuestionList'
 import QuestionForm from '../components/QuestionForm'
 import FinalQuestionForm from '../components/FinalQuestionForm'
 
-type DefaultProps = {
-
-}
 type Props = {}
 type State = {
   answerChosen: bool,
@@ -15,8 +12,7 @@ type State = {
   questionCount: number,
   questions: Array<Object>,
 };
-
-export default class GuesserContainer extends Component<DefaultProps, Props, State> {
+export default class GuesserContainer extends Component<void, Props, State> {
   static defaultProps = {
 
   }
@@ -100,13 +96,11 @@ export default class GuesserContainer extends Component<DefaultProps, Props, Sta
           <FinalQuestionForm onSubmit={(question) => this.askQuestion(question)} />
         }
         {this.askingQuestion() &&
-          <QuestionForm onSubmit={(question) => this.askQuestion(question)} />
+          <QuestionForm onSubmit={(question: string) => this.askQuestion(question)} />
         }
         {this.shouldRenderQuestionList() &&
           <QuestionList questions={this.state.questions} />
         }
-        <QuestionForm prompt={45678} onSubmit={'1351'}/>
-        {QuestionForm({prompt: 1241, onSubmit: 123})}
       </div>
     )
   }

@@ -16,7 +16,7 @@
         "jsx-a11y/no-noninteractive-element-interactions": 0,
         "babel/semi": [2, "never"],
         "flowtype/boolean-style": [2, "bool"],
-        "flowtype/define-flow-type": [2],
+        "flowtype/define-flow-type": 2,
         "flowtype/space-after-type-colon": [
             2,
             "always"
@@ -47,5 +47,5 @@
         "sourceType": "module",
         "ecmaVersion": 6
     },
-    "plugins": ["react", "babel", "jsx-a11y", "flowtype"]
+    "plugins": ["flowtype", "react", "babel", "jsx-a11y"]
 }

@@ -1,5 +1,13 @@
 import {createElement} from 'react'
 
-const Heading = ({size, children}) => createElement(`h${size}`, null, children)
+type Props = {
+  size: number,
+  children: Array<JSX.Element>,
+}
 
-export default Heading
+export default function Heading({
+  size,
+  children,
+}: Props): JSX.Element {
+  return createElement(`h${size}`, null, children)
+}
