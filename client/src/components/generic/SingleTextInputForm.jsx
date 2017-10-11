@@ -1,18 +1,9 @@
 import React, {Component} from 'react'
 
-type State = {inputText: string}
-type Props = {
-  buttonText: ?string,
-  placeholderText: ?string,
-  onSubmit: Function,
-}
-type DefaultProps = {buttonText: 'Submit'}
+export default class SingleTextInputForm extends Component {
 
-export default class SingleTextInputForm extends Component<
-DefaultProps,
-Props,
-State> {
-  constructor(props: Props) {
+  static defaultProps = {buttonText: 'Submit'}
+  constructor(props) {
     super(props)
     this.state = {
       inputText: '',

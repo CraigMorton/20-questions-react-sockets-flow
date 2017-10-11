@@ -5,14 +5,7 @@ import QuestionList from '../components/QuestionList'
 import QuestionForm from '../components/QuestionForm'
 import FinalQuestionForm from '../components/FinalQuestionForm'
 
-type Props = {}
-type State = {
-  answerChosen: bool,
-  waitingForAnswer: bool,
-  questionCount: number,
-  questions: Array<Object>,
-};
-export default class GuesserContainer extends Component<void, Props, State> {
+export default class GuesserContainer extends Component {
   static defaultProps = {
 
   }
